@@ -12,7 +12,6 @@ const mobileMenu = $("#mobileMenu");
 
 function setMenu(open) {
   if (!menuToggle || !mobileMenu) return;
-
   menuToggle.classList.toggle("active", open);
   menuToggle.setAttribute("aria-expanded", String(open));
   menuToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
@@ -21,32 +20,21 @@ function setMenu(open) {
 }
 
 menuToggle?.addEventListener("click", () => setMenu(mobileMenu?.hidden));
-$$("a", mobileMenu).forEach((link) => link.addEventListener("click", () => setMenu(false)));
-
-window.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") setMenu(false);
-});
-
-window.addEventListener("resize", () => {
-  if (window.innerWidth > 820) setMenu(false);
-});
+$$('a', mobileMenu).forEach((link) => link.addEventListener("click", () => setMenu(false)));
+window.addEventListener("keydown", (event) => { if (event.key === "Escape") setMenu(false); });
+window.addEventListener("resize", () => { if (window.innerWidth > 820) setMenu(false); });
 
 const revealItems = $$(".reveal");
-
 if (reducedMotion || !("IntersectionObserver" in window)) {
   revealItems.forEach((item) => item.classList.add("visible"));
 } else {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
-      });
-    },
-    { threshold: 0.12, rootMargin: "0px 0px -28px" }
-  );
-
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("visible");
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.12, rootMargin: "0px 0px -28px" });
   revealItems.forEach((item, index) => {
     item.style.transitionDelay = `${Math.min(index % 3, 2) * 70}ms`;
     observer.observe(item);
