@@ -1,0 +1,37 @@
+VISIONMATRIX TECH — GITHUB PAGES UPLOAD
+
+Target repository:
+visionmatrixtech07-byte/visionmatrixtech.github.io
+
+REPLACE these existing root files:
+- index.html
+- style.css
+- script.js
+- 404.html
+- sitemap.xml
+- CNAME
+- googlec08a601828ea2c2c.html
+
+ADD these root files:
+- visionmatrix.jpeg
+- robots.txt
+
+REMOVE the incorrectly named file after robots.txt is uploaded:
+- robot.txt
+
+IMPORTANT:
+- Keep every file at the repository root, not inside a subfolder.
+- GitHub Pages filenames are case-sensitive. The website expects exactly visionmatrix.jpeg.
+- Do not delete CNAME or the Google verification file.
+- The WhatsApp enquiry form prepares a message for +91 99661 96013. The customer must review it and tap Send in WhatsApp.
+- This package does not include analytics tracking or a paid form service.
+
+After upload, verify:
+1. https://visionmatrixtech.com/
+2. Header and footer logo
+3. Mobile navigation
+4. All Start a project buttons
+5. Three-step enquiry form
+6. WhatsApp prepared message
+7. https://visionmatrixtech.com/robots.txt
+8. https://visionmatrixtech.com/sitemap.xml
