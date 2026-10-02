@@ -33,12 +33,26 @@ body {
   overflow-x: hidden;
   background: var(--paper);
   color: var(--ink);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.55;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
+
+/* Standard-font pass: preserve the brand design without compressed display typography. */
+h1, h2, h3, p, a, button, input, select, textarea, small, strong, span { font-family: Arial, Helvetica, sans-serif; }
+.hero h1, .display-heading, .contact h2 { font-weight: 700; letter-spacing: -0.035em; line-height: 0.98; }
+.eyebrow, .section-kicker, .hero-system-strip span { font-weight: 700; letter-spacing: 0.08em; }
+.core-system-grid { display:grid; grid-template-columns:repeat(1,minmax(0,1fr)); gap:14px; margin-top:40px; }
+.core-system-card { min-height:220px; padding:26px; border:1px solid var(--line); border-radius:22px; background:linear-gradient(145deg,#fff,#f1f7ff); transition:transform .25s ease, border-color .25s ease, box-shadow .25s ease; }
+.core-system-card:hover, .core-system-card:focus-visible { transform:translateY(-5px); border-color:var(--blue); box-shadow:0 18px 34px rgba(7,89,248,.12); }
+.core-system-card span { color:var(--blue); font-weight:700; font-size:13px; }
+.core-system-card h3 { margin:18px 0 10px; font-size:25px; line-height:1.1; letter-spacing:-.025em; }
+.core-system-card p { margin:0; color:var(--muted); }
+.core-system-card b { display:block; margin-top:24px; color:var(--blue); font-size:14px; }
+@media (min-width:700px) { .core-system-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (min-width:1050px) { .core-system-grid { grid-template-columns:repeat(3,minmax(0,1fr)); } }
 
 body.menu-open,
 body.dialog-open {
