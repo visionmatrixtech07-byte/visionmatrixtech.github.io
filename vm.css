@@ -132,3 +132,5 @@ details.m[open] summary i:nth-child(1){transform:translateY(7.5px) rotate(45deg)
 footer .w p{margin:.4em 0}.ql{display:flex;gap:6px 20px;flex-wrap:wrap}.ql span{color:#7fe3ff;font-weight:600;min-width:62px}
 @media(max-width:760px){.hero{padding:40px 0 24px}.lane{height:150px}.hero .btns .btn{padding:13px 18px;font-size:.95rem}.tg{margin-top:26px}
 .cards{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin:22px -20px 0;padding:6px 20px 22px}.card{flex:0 0 78%;scroll-snap-align:start;min-height:260px}.sw{display:block;margin-top:0}}
+
+.pills{display:flex;flex-wrap:wrap;gap:10px}.pills a{padding:12px 20px;border-radius:999px;border:1.5px solid var(--l);color:var(--n);font-weight:600;text-decoration:none;transition:all .2s}.pills a:hover{background:var(--b);color:#fff;border-color:var(--b)}
