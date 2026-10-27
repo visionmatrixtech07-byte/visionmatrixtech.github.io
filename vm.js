@@ -1,0 +1,4 @@
+(function(){var P='919966196013';function wa(t){return 'https://wa.me/'+P+'?text='+encodeURIComponent(t)}
+var b=document.getElementById('send');if(b){b.addEventListener('click',function(e){e.preventDefault();var a=[].slice.call(document.querySelectorAll('.chk input:checked')).map(function(i){return '- '+i.value});
+var t='Hello VisionMatrix Tech, I took the leak check on your website.'+(a.length?' This sounds like my business:\n'+a.join('\n'):' I would like to talk about my business.');location.href=wa(t)})}
+document.querySelectorAll('[data-wa]').forEach(function(a){a.href=wa(a.getAttribute('data-wa'))})})();
