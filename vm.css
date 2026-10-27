@@ -43,3 +43,4 @@ details.m div{position:absolute;right:0;top:48px;background:#fff;border:1px soli
 .sec{padding:52px 0}.two,.steps,footer .g{grid-template-columns:1fr}ol.j{flex-direction:column;gap:18px}ol.j li{padding:0 0 0 30px}ol.j li:before{top:5px}
 ol.j li:after{top:22px;bottom:-16px;left:6px;right:auto;border-top:0;border-left:2px solid var(--s)}ol.j li.x:after{border-left:2px dashed var(--b)}
 .bar{display:flex}.hdr-btn{display:none}}
+.prose{max-width:720px}.prose h2{font-size:1.6rem;margin:1.8em 0 .5em}.prose ul{padding-left:1.2em}.prose li{margin-bottom:.5em}
