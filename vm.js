@@ -2,7 +2,7 @@
 var b=document.getElementById('send');if(b){b.addEventListener('click',function(e){e.preventDefault();var a=[].slice.call(document.querySelectorAll('.chk input:checked')).map(function(i){return '- '+i.value});
 var t='Hello VisionMatrix Tech, I took the leak check on your website.'+(a.length?' This sounds like my business:\n'+a.join('\n'):' I would like to talk about my business.');location.href=wa(t)})}
 document.querySelectorAll('[data-wa]').forEach(function(a){a.href=wa(a.getAttribute('data-wa'))})})();
-(function(){var rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+(function(){var rm=matchMedia('(prefers-reduced-motion:reduce)').matches;var pg=document.getElementById('pg');if(pg)addEventListener('scroll',function(){var h=document.documentElement;pg.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%'},{passive:true});
 if(!rm&&'IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.1});
 document.querySelectorAll('.sec .w:not(.two) > *:not(.rows):not(.steps), .sec .w.two > div, .rows a, .steps li').forEach(function(el){var i=[].indexOf.call(el.parentNode.children,el);el.classList.add('rv');el.style.transitionDelay=(i%6)*70+'ms';io.observe(el)})}
 var ck=document.querySelectorAll('.chk input'),tc=document.getElementById('tc');ck.forEach(function(c){c.addEventListener('change',function(){tc.textContent=document.querySelectorAll('.chk input:checked').length+' of '+ck.length+' ticked'})});
