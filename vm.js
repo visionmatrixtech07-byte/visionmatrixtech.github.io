@@ -48,3 +48,15 @@ if(ix){ix.hidden=false;ix.textContent='See the '+d.n+' system';ix.href=k+'.html'
 chips.forEach(function(b){b.addEventListener('click',function(){sel(b.getAttribute('data-k'))})});
 if(rp)rp.addEventListener('click',function(){play(cur)});
 new IntersectionObserver(function(e){vis=e[0].isIntersecting}).observe(chat);play(cur)})();
+
+(function(){var s=document.getElementById('dw');if(!s)return;if(new Date()>new Date('2026-11-14T00:00:00+05:30')){s.remove();return}
+var rm=matchMedia('(prefers-reduced-motion:reduce)').matches,b=document.getElementById('dwb');if(rm){b.remove();return}
+var c=document.createElement('canvas');c.id='fx';document.body.appendChild(c);var x=c.getContext('2d'),W,H,P=[],on=true,d=Math.min(devicePixelRatio||1,2),C=['#ffd166','#ff9f1c','#ff4d6d','#ffe29a','#4cc9f0','#f72585','#fff3b0'];
+try{if(localStorage.getItem('dwoff')==='1'){on=false;b.textContent='Crackers: off'}}catch(e){}
+function rs(){W=c.width=innerWidth*d;H=c.height=innerHeight*d}rs();addEventListener('resize',rs);
+function burst(px,py){var a=C[Math.random()*C.length|0],z=C[Math.random()*C.length|0],n=56;for(var i=0;i<n;i++){var g=Math.PI*2*i/n+Math.random()*.2,v=(Math.random()*3+1.5)*d;P.push({x:px*d,y:py*d,vx:Math.cos(g)*v,vy:Math.sin(g)*v,l:1,c:i%2?a:z,s:(Math.random()*1.8+1)*d})}}
+function sky(){burst(innerWidth*(.15+Math.random()*.7),innerHeight*(.12+Math.random()*.3))}
+function tick(){if(P.length||on){x.clearRect(0,0,W,H);for(var i=P.length-1;i>=0;i--){var p=P[i];p.x+=p.vx;p.y+=p.vy;p.vy+=.045*d;p.vx*=.985;p.vy*=.985;p.l-=.013;if(p.l<=0){P.splice(i,1);continue}x.globalAlpha=p.l;x.fillStyle=p.c;x.beginPath();x.arc(p.x,p.y,p.s,0,6.3);x.fill()}x.globalAlpha=1}requestAnimationFrame(tick)}tick();
+if(on)for(var k=0;k<6;k++)setTimeout(function(){if(on&&!document.hidden)sky()},500+k*900);
+b.addEventListener('click',function(){on=!on;b.textContent='Crackers: '+(on?'on':'off');try{localStorage.setItem('dwoff',on?'0':'1')}catch(e){}if(on)sky();else P.length=0});
+document.addEventListener('pointerdown',function(e){if(on&&!e.target.closest('button,a,input,summary,label,select'))burst(e.clientX,e.clientY)});s.querySelector('span').addEventListener('click',function(){if(on)sky()})})();
