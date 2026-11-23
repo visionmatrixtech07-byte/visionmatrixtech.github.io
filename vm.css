@@ -161,3 +161,5 @@ footer .w{display:grid;grid-template-columns:1.1fr 1.3fr 1.3fr .9fr;gap:8px 44px
 footer .w>.note:last-child{grid-column:1/-1;margin-top:28px}
 footer .fb p{margin:.5em 0}footer .fc>p{margin:0 0 22px}
 footer .ql{flex-direction:column;align-items:flex-start;gap:9px}footer .ql span{min-width:0;margin-bottom:2px;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase}}
+
+.kn{font-family:"Noto Sans Kannada","Nirmala UI","Tunga","Kedage",sans-serif;line-height:1.85}
